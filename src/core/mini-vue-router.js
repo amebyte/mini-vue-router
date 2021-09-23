@@ -4,7 +4,7 @@ class VueRouter{
         this.$options = options
         Vue.util.defineReactive(this, 'currPath', window.location.hash.slice(1) || '/')
         window.addEventListener('hashchange', () => {
-            this.currPath = window.location.hash.slice(1) || '/' 
+            this.currPath = window.location.hash.slice(1)
         })
     }
 }
@@ -26,16 +26,16 @@ VueRouter.install = function(_vue) {
             }
         },
         render(h) {
-            return h('a', {attrs: { href: '#' + this.to}}, this.$slots.default)
+            return h('a', {attrs: { href: '#' + this.to }}, this.$slots.default)
         }
-    })
+    })   
     Vue.component('router-view', {
         render(h) {
             const route = this.$router.$options.routes.find(route => route.path === this.$router.currPath)
             const Component = route ? route.component : null
             return h(Component)
         }
-    })
+    }) 
 }
 
 export default VueRouter
