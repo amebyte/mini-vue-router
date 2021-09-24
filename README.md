@@ -55,13 +55,13 @@ this.$router.push('/about')
 
 通过阅读vue文档我们可以得知Vue.use是[使用插件](https://cn.vuejs.org/v2/guide/plugins.html)的方法
 
-  ![](L:/work2020/test/mini-vue-router/images/vue-use.png)
+  ![](images/vue-use.png)
 
 由文档可以得知vue-router是一个官方提供的插件
 
 通过vue文档的[开发插件](https://cn.vuejs.org/v2/guide/plugins.html)我们可以知道怎么开发一个插件
 
- ![](L:/work2020/test/mini-vue-router/images/install.png)
+ ![](images/install.png)
 
 有了这些基础知识后，我们就可以进行mini-vue-router的开发了。在开发之前我们要了解vue-router的基本原理
 
