@@ -55,13 +55,13 @@ this.$router.push('/about')
 
 通过阅读vue文档我们可以得知Vue.use是[使用插件](https://cn.vuejs.org/v2/guide/plugins.html)的方法
 
-  ![](images/vue-use.png)
+  ![](./images/vue-use.png)
 
 由文档可以得知vue-router是一个官方提供的插件
 
 通过vue文档的[开发插件](https://cn.vuejs.org/v2/guide/plugins.html)我们可以知道怎么开发一个插件
 
- ![](images/install.png)
+ ![](./images/install.png)
 
 有了这些基础知识后，我们就可以进行mini-vue-router的开发了。在开发之前我们要了解vue-router的基本原理
 
@@ -97,7 +97,7 @@ install被调用的时候，会把Vue的构造函数传进来，主要是为了�
 
 我们看看官方关于[全局注册](https://cn.vuejs.org/v2/guide/components-registration.html)组件的描述
 
- ![](images/Vue.component.png)
+ ![](./images/Vue.component.png)
 
 router-link，router-view的实现代码
 
@@ -128,15 +128,15 @@ VueRouter.install = function(_vue) {
 
 h即是[createElement](https://cn.vuejs.org/v2/guide/render-function.html#createElement-参数)渲染函数
 
-![](images/createElement.png)
+![](./images/createElement.png)
 
 [深入数据对象](https://cn.vuejs.org/v2/guide/render-function.html#深入数据对象)
 
- ![](images/h-object.png)
+ ![](./images/h-object.png)
 
 ##### router-view动态渲染的思路
 
- ![](images/router-view.png)
+ ![](./images/router-view.png)
 
 1. 获取hash #url，通过`window.location.hash`获取
 2. 根据上面的地址获取对应的组件配置（`Component`)，那么怎么获取呢？
@@ -149,24 +149,24 @@ h即是[createElement](https://cn.vuejs.org/v2/guide/render-function.html#create
 
 这个VueRouter实例在最开始的main.js的时候就注入了
 
- ![](images/router.png)
+ ![](./images/router.png)
 
 这个router实例就可以在install里面利用混入mixin进行延迟执行注册
 
- ![](images/install-router.png)
+ ![](./images/install-router.png)
 
 install执行的时候VueRouter还没实例化，所以要进行混入(mixin)
 
 ##### 获取hash 
 
- ![](images/hash-url.png)
+ ![](./images/hash-url.png)
 
 利用`Vue.util.defineReactive`设置当前的`currPath`为响应式数据，⼀旦变化，动态重新执⾏render 
 
 
 ##### 根据url显示对应的内容
 
- ![](images/router-view-render-component.png)
+ ![](./images/router-view-render-component.png)
 
 监听hashchange变化的地址，然后去和配置里的路由器进行匹配，然后拿到对应的Component，然后渲染在router-view容器组件上
 
