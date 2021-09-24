@@ -55,7 +55,7 @@ this.$router.push('/about')
 
 通过阅读vue文档我们可以得知Vue.use是[使用插件](https://cn.vuejs.org/v2/guide/plugins.html)的方法
 
-  ![](./images/vue-use.png)
+  ![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ca6340e1e844d5a56b440890644a8b~tplv-k3u1fbpfcp-watermark.image?)
 
 由文档可以得知vue-router是一个官方提供的插件
 
