@@ -1,4 +1,4 @@
-# 手写实现mini-VueRouter的原理
+# 手写实现mini-VueRouter
 
 在spa的应用程序中,url发生变化的时候，页面不进行刷新，也能显示对应的视图。Vue Router 是 [Vue.js](http://cn.vuejs.org/)官方的路由管理器，下面我们来研究一下它的原理 
 
