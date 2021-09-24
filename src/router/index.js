@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueRouter from '../core/mini-vue-router'
+import VueRouter from '../core/mini-vue-router3'
 import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
